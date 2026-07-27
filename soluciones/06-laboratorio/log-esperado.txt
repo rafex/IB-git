@@ -1,0 +1,26 @@
+# Solución 06 — Laboratorio
+
+## Grafo esperado en origin
+
+```
+* <luis> resuelve: conserva sopa de verduras
+* <luis> especifica sopa de verduras
+* <ana> especifica sopa del día
+* <luis> reordena menú: pan al final
+* <ana> agrega ensalada al menú
+* <base> agrega menú inicial
+```
+
+## Contenido final de menu.txt (después de resolver)
+
+```
+1. Sopa de verduras
+2. Ensalada
+3. Pan
+```
+
+## Flujo de trabajo exitoso
+
+1. Ana: push ensalada → Luis: pull (ve ensalada)
+2. Luis: push reorden → Ana: pull (ve nuevo orden)
+3. Conflicto en "Sopa": Luis resuelve y hace push → Ana: pull (ve resolución)

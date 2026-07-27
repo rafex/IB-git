@@ -1,0 +1,13 @@
+# Solución 02 — Ramas
+
+Estado esperado del grafo:
+
+```
+* <commit> (main) agrega ronda de preguntas
+| * <commit> (ana) agrega sección de cierre
+|/
+* <B> agrega demo con archivos de texto
+* <A> agrega agenda inicial
+```
+
+main y ana divergen desde el commit B.

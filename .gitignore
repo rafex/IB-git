@@ -1,0 +1,57 @@
+# === Gitignore del taller "Git para colaborar" ===
+#
+# Cada sección explica qué tipo de archivos se excluyen y por qué.
+# Si eres participante del taller: no necesitas modificar este archivo.
+# Las carpetas taller-*/ que generan los setup.sh ya están cubiertas.
+
+# --- opencode: configuración local del agente de asistencia ---
+# Estos archivos son de uso interno de opencode en la máquina del facilitador.
+# No son parte del contenido del taller ni deben viajar al remote.
+.opencode/sessions.db
+.opencode/sessions*db
+.opencode/sessions.db-shm
+.opencode/sessions.db-wal
+.opencode/worktrees/
+.opencode/worktrees.db
+.opencode/worktrees.log
+.opencode/node_modules/
+session-ses_*.md
+
+# --- Carpetas generadas por los ejercicios ---
+# Cada setup.sh crea una carpeta taller-XX/ con repositorios de práctica.
+# Son entornos efímeros: cada participante los regenera al ejecutar el setup.
+# No se versionan porque contienen estado local (commits, config, etc.).
+taller-*/
+
+# --- macOS ---
+# Finder guarda metadatos por carpeta. Si no se ignoran, se cuelan en commits.
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# --- Windows ---
+# Explorador de archivos y thumbnails. Útil si algún participante usa Windows.
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# --- Linux ---
+# Directorios de trash. Pueden aparecer si alguien trabaja con gestor de archivos.
+.Trash-*
+
+# --- Editores de texto ---
+# Archivos de respaldo y swap que algunos editores crean al guardar.
+# Si no se ignoran, un participante podría commitearlos sin darse cuenta.
+*~
+*.swp
+*.swo
+*.bak
+*.orig
+
+# --- VS Code (si algún participante lo usa en la raíz del repo) ---
+.vscode/
+
+# --- Archivos temporales y logs ---
+# Por si algún script o editor genera logs durante el taller.
+*.log
+*.tmp

@@ -1,0 +1,20 @@
+# Solución 03 — Remotes
+
+Estado esperado en ambos clones (ana y luis):
+
+```
+<D> agrega demo final           (autor: Luis)
+<C> agrega ronda de preguntas   (autor: Ana)
+<B> agrega sección de preguntas
+<A> agrega agenda inicial
+```
+
+Contenido final de `agenda.txt` en ambos clones:
+
+```
+1. Bienvenida
+2. Demo con archivos de texto
+3. Preguntas
+4. Ronda de preguntas
+5. Demo final
+```

@@ -1,0 +1,17 @@
+# Solución 01 — Commits
+
+Estado esperado del historial después del ejercicio:
+
+```
+<C> reordena cierre: preguntas antes de la demo
+<B> agrega demo con archivos de texto
+<A> agrega agenda inicial
+```
+
+Contenido final de `agenda.txt`:
+
+```
+1. Bienvenida
+2. Preguntas
+3. Demo con archivos de texto
+```

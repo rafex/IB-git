@@ -1,0 +1,40 @@
+# Solución 04 — Merge, Rebase, ff-only
+
+## Merge
+
+Grafo después del merge de feature en main:
+
+```
+*   <M> merge feature into main
+|\
+| * <feature> agrega ronda de preguntas
+* | <main> agrega cierre
+|/
+* <B> agrega demo con archivos de texto
+* <A> agrega agenda inicial
+```
+
+M tiene dos padres.
+
+## Rebase
+
+Grafo después de rebase de mi-cambio sobre main:
+
+```
+* <mi-cambio> agrega cierre              ← mismo trabajo, nuevo hash
+* <main> agrega notas
+* <B> agrega demo con archivos de texto
+* <A> agrega agenda inicial
+```
+
+Historial lineal, sin merge commit. El commit de mi-cambio cambió de hash.
+
+## ff-only
+
+```
+* <adelante, main> agrega contacto
+* <B> agrega demo con archivos de texto
+* <A> agrega agenda inicial
+```
+
+main y adelante apuntan al mismo commit. No se creó merge commit.

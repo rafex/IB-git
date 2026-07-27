@@ -1,0 +1,21 @@
+# Solución 05 — Conflictos
+
+## Grafo esperado después de resolver
+
+```
+*   <M> resuelve conflicto: conserva ambas líneas del acuerdo
+|\
+| * <luis> agrega preparación de sala virtual
+* | <ana> agrega confirmación de asistencia
+|/
+* <base> agrega acuerdos iniciales
+```
+
+## Contenido final de acuerdos.txt
+
+```
+- Revisar cambios antes de las 16:00
+- Enviar resumen al equipo
+- Confirmar asistencia antes del evento
+- Preparar sala virtual
+```

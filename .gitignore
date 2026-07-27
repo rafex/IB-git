@@ -23,6 +23,11 @@ session-ses_*.md
 # No se versionan porque contienen estado local (commits, config, etc.).
 taller-*/
 
+# --- Workspace de demos del Makefile ---
+# Cada make slide-XX crea repositorios de práctica en workspace-slides/.
+# Son entornos efímeros que se regeneran con cada ejecución.
+workspace-slides/
+
 # --- macOS ---
 # Finder guarda metadatos por carpeta. Si no se ignoran, se cuelan en commits.
 .DS_Store

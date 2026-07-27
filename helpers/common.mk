@@ -56,6 +56,8 @@ help:
 	@echo ""
 	@echo "  $(C_BOLD)Utilidades:$(C_RESET)"
 	@echo "    make clean       Limpiar workspace de demos"
+	@echo "    make demo-all    Ejecutar todos los demos en secuencia"
+	@echo "    make demo-all-fast  Ídem, sin pausas (verificación)"
 	@echo "    make help        Esta ayuda"
 	@echo ""
 

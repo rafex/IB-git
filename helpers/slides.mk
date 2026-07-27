@@ -47,4 +47,14 @@ clean:
 	@rm -rf $(WS)
 	@echo "Workspace $(WS)/ eliminado."
 
-.PHONY: slide-07 slide-10 slide-14 slide-17 slide-19 slide-21 slide-22 slide-26 clean
+# ─── Todos los demos en secuencia ─────────────────────────────────────────────
+
+demo-all: $(WS)
+	@bash helpers/demos/run-all.sh
+
+# ─── Todos los demos sin pausas (para verificación rápida) ────────────────────
+
+demo-all-fast: $(WS)
+	@SKIP_PAUSE=1 bash helpers/demos/run-all.sh
+
+.PHONY: slide-07 slide-10 slide-14 slide-17 slide-19 slide-21 slide-22 slide-26 clean demo-all demo-all-fast

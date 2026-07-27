@@ -24,25 +24,24 @@ echo "2. Preguntas"   >> agenda.txt
 git add agenda.txt
 git commit -m "agrega agenda inicial" | output
 
-# ── Rama ana ──
+# ── Rama ana: modifica línea 1 ──
 git switch -c ana
-echo "1. Bienvenida"                   > agenda.txt
+echo "1. Bienvenida y presentación"    > agenda.txt
 echo "2. Preguntas"                   >> agenda.txt
-echo "3. Ronda de preguntas"          >> agenda.txt
 
-show_file "agenda.txt · rama ana" agenda.txt
+show_file "agenda.txt · rama ana (modifica línea 1)" agenda.txt
 
 git add agenda.txt
-git commit -m "ana: agrega ronda de preguntas" | output
+git commit -m "ana: amplía bienvenida" | output
 
-# ── Rama luis (desde main) ──
+# ── Rama luis: agrega línea al final ──
 git switch main
 git switch -c luis
 echo "1. Bienvenida"  > agenda.txt
 echo "2. Preguntas"   >> agenda.txt
 echo "3. Notas"       >> agenda.txt
 
-show_file "agenda.txt · rama luis" agenda.txt
+show_file "agenda.txt · rama luis (agrega línea 3)" agenda.txt
 
 git add agenda.txt
 git commit -m "luis: agrega notas" | output
@@ -51,14 +50,14 @@ echo ""
 cmd "git log --oneline --graph --all"
 git log --oneline --graph --all | output
 
-echo -e "  ${DIM}Dos ramas divergentes. Ana tocó línea 3, Luis tocó línea 3 también.${RESET}"
+echo -e "  ${DIM}Dos ramas divergentes. Ana tocó línea 1, Luis agregó línea 3. Zonas distintas.${RESET}"
 pausa
 
 # ── Merge ana en main ──
 git switch main
 
 cmd "git merge ana"
-echo -e "  ${DIM}(Ana y Luis tocaron líneas distintas → auto-merge exitoso)${RESET}"
+echo -e "  ${DIM}(Ana tocó línea 1, Luis agregó línea 3 → auto-merge exitoso)${RESET}"
 git merge ana | output
 
 echo ""
@@ -70,8 +69,9 @@ git log --oneline --graph --all | output
 echo -e "  ${DIM}Merge commit (M) con dos padres: main y ana.${RESET}"
 pausa
 
-# ── Ahora merge luis (también líneas distintas) ──
+# ── Ahora merge luis (zona distinta → sin conflicto) ──
 cmd "git merge luis"
+echo -e "  ${DIM}(Luis agregó línea 3, zona distinta a la de Ana → auto-merge)${RESET}"
 git merge luis | output
 
 echo ""

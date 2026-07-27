@@ -55,15 +55,14 @@ pausa
 # ── Alguien avanza main mientras tanto ──
 cmd "git switch main"
 git switch main
-echo "1. Bienvenida"                   > agenda.txt
-echo "2. Demo con archivos de texto"  >> agenda.txt
-echo "3. Preguntas"                   >> agenda.txt
-echo "4. Notas del equipo"            >> agenda.txt
+echo "1. Bienvenida"                         > agenda.txt
+echo "2. Demo con archivos de texto y notas" >> agenda.txt
+echo "3. Preguntas"                         >> agenda.txt
 
-show_file "agenda.txt · main avanzó" agenda.txt
+show_file "agenda.txt · main avanzó (modifica línea 2)" agenda.txt
 
 git add agenda.txt
-git commit -m "agrega notas del equipo" | output
+git commit -m "amplía demo con notas" | output
 
 echo ""
 cmd "git log --oneline --graph --all"
@@ -90,11 +89,10 @@ show_file "agenda.txt · feature después del rebase" agenda.txt
 
 pausa
 
-echo "1. Bienvenida"                   > agenda.txt
-echo "2. Demo con archivos de texto"  >> agenda.txt
-echo "3. Preguntas"                   >> agenda.txt
-echo "4. Notas del equipo"            >> agenda.txt
-echo "5. Cierre con feedback"         >> agenda.txt
+echo "1. Bienvenida"                         > agenda.txt
+echo "2. Demo con archivos de texto y notas" >> agenda.txt
+echo "3. Preguntas"                         >> agenda.txt
+echo "4. Cierre con feedback"              >> agenda.txt
 
 echo -e "  ${DIM}Resultado: las líneas de ambas ramas se conservan en orden.${RESET}"
 show_file "agenda.txt · combinación final" agenda.txt
